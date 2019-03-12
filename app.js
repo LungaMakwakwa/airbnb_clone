@@ -7,7 +7,7 @@ passportSetup = require('./config/passport-setup');
 app.set('view engine', 'ejs');
 
 //static files
-app.use(express.static(__dirname + '/assets'));
+// app.use(express.static('/assets'));
 
 //set up routes
 app.use('/auth', authRoutes);
