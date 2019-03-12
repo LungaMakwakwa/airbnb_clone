@@ -1,4 +1,5 @@
 router = require('express').Router();
+passport = require('passport');
 
 //auth login
 router.get('/login', function(req, res){
@@ -11,9 +12,14 @@ router.get('/logout', function(req, res){
 });
 
 // auth with gmail
-router.get('/gmail', function(req, res){
-    //handle with gmail
-    res.send('logging in with google');
+router.get('/google',passport.authenticate('google', {
+    scope: ['profile']
+}));
+
+//callback route for google to redirect
+router.get('/google/redirect', (req, res) => {
+    res.send('you have logged in niqqah')
 });
+
 
 module.exports = router;

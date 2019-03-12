@@ -12,6 +12,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "passport-oauth2-jwt-bearer": "^0.2.0"
   }
 }
